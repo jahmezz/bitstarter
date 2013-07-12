@@ -1,5 +1,7 @@
 var express = require('express');
 var fs = require('fs');
+var rest = require('restler');
+var url = process.argv[0];
 var app = express.createServer(express.logger());
 var buffer = fs.readFileSync("index.html");
 app.get('/', function(request, response) {
